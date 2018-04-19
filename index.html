@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>Adding Noise</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<center style="margin-top: 200px;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Open Noise Images Iditor
+</button>
+</center>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="example">
+        <h3>Adding Noise</h3>
+
+
+        <div class="column2">
+
+       <center>
+            <canvas id="orig" width="500px;" height="500px;" style="position: absolute;" ></canvas>
+            <canvas id="panel" width="500px;" height="500px;"   style="position: relative; "></canvas>
+        
+        </center>
+        </div>
+
+     <div class="column1" >
+        <div class="col-md-3" style="margin-top:20px ">
+            Reset to:<br />
+            <input type="button" class="btn btn-primary" onclick="resetToColor()" value="Color" />
+            <input type="button" class="btn btn-primary" onclick="resetToGrayscale()" value="Grayscale" /><hr />
+            </div>
+
+        <div class="col-md-3" style="margin-top:20px ">
+            Effects:<br />
+            <input type="button"  class="btn btn-primary" onclick="resetToBlur()" value="1. Blur" /><br />
+            <input type="button" class="btn btn-primary" onclick="resetToNoise()" value="2. Add noise" /><br />
+            <input type="button" class="btn btn-primary" onclick="resetToInvert()" value="3. Invert colors" /><hr />
+        </div>
+
+        <div class="col-md-3" style="margin-top:20px ">
+            Adjustment:<br />
+            <input type="button" class="btn btn-primary" onclick="changeGrayValue(0.1)" value="Lighter" /><br />
+            <input type="button" class="btn btn-primary" onclick="changeGrayValue(-0.1)" value="Darker" /><br />
+        </div>
+
+        <div class="col-md-3" style="margin-top:20px ">
+            Red: <input type="button" onclick="changeColorValue('er', 10)" value="More" />
+            <input type="button" onclick="changeColorValue('er', -10)" value="Less" /><br />
+            Green: <input type="button" onclick="changeColorValue('eg', 10)" value="More" />
+            <input type="button" onclick="changeColorValue('eg', -10)" value="Less" /><br />
+            Blue: <input type="button" onclick="changeColorValue('eb', 10)" value="More" />
+            <input type="button" onclick="changeColorValue('eb', -10)" value="Less" />
+            Blur: <input type="button" onclick="changeBlurValue(1)" value="More" />
+            <input type="button" onclick="changeBlurValue(-1)" value="Less" /><br />
+        </div>
+    </div>
+    <hr style="clear:both;" />
+
+    </div>
+</div>
+</body>
+</html>

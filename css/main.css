@@ -1,0 +1,28 @@
+body {
+    background:#eee;
+    font-family:Verdana, Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0
+}
+.example {
+    background:#fff;
+    width:730px;
+    font-size:80%;
+    border:1px #000 solid;
+    margin:20px auto;
+    padding:15px;
+    position:relative;
+    -moz-border-radius: 3px;
+    -webkit-border-radius:3px
+}
+h3 {
+    text-align:center;
+}
+.column2 {
+    float: left;
+    background-color:#888;
+    
+}
+input[type=button] {
+    margin:5px;
+}
